@@ -28,6 +28,10 @@ const authenticateToken = (req, res, next) => {
   });
 };
 
+app.get("/", (req, res) => {
+  res.send("HEllo WOrld");
+});
+
 // Get all users
 app.get("/users", authenticateToken, (req, res) => {
   res.json(users);
